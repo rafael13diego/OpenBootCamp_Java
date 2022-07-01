@@ -3,11 +3,14 @@ package com.example;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        System.out.println(Arrays.asList(context.getBeanDefinitionNames()));
         Calculadora service = (Calculadora) context.getBean("calculadora");
         System.out.println(service.helloWorld());
 
