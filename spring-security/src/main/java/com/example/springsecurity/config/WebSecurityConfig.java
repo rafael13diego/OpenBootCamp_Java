@@ -17,6 +17,7 @@ import org.springframework.security.web.firewall.StrictHttpFirewall;
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    //NECESARIO CONFIGURAR EL PWD por encoder
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
